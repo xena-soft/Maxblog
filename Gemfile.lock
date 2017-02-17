@@ -50,6 +50,8 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.4)
     debug_inspector (0.0.2)
+    default_value_for (3.0.2)
+      activerecord (>= 3.2.0, < 5.1)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.17)
@@ -177,6 +179,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
+  default_value_for
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
