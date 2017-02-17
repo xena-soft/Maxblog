@@ -1,0 +1,27 @@
+%h1 Заметки (#{@posts.count})
+
+%table.table.table-bordered.table-condensed.table-hover
+  %tr
+    %th.td-18
+      \#
+    %th
+      Автор
+    %th
+      Название
+    %th
+      Заметка
+    %th
+      Дата публикации
+
+  - @posts.each_with_index do |post, index|
+    %tr.td-18
+      %td
+        = index + 1
+      %td
+        = post.author.nickname
+      %td
+        = post.title
+      %td
+        = post.body
+      %td
+        = post.published_at
