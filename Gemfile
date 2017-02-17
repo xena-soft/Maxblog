@@ -11,6 +11,7 @@ gem 'rails', '~> 5.0.1'
 # gem 'pg'
 gem 'haml-rails'
 gem 'default_value_for'
+gem 'will_paginate'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
