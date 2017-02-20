@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
 
-  protect_from_forgery with: :null_session
+  # protect_from_forgery with: :null_session
 
   attr_reader :current_user
 
