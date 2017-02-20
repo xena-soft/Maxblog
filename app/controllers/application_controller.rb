@@ -1,6 +1,8 @@
-class ApplicationController < ActionController::API
+class ApplicationController < ActionController::Base
 
-  # protect_from_forgery with: :null_session
+  protect_from_forgery with: :null_session
+
+  before_action :authenticate_request
 
   attr_reader :current_user
 
