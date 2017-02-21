@@ -1,4 +1,4 @@
-class JsonWebToken
+module JsonWebToken
 
   class << self
 
