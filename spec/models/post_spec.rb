@@ -18,12 +18,12 @@ describe Post do
   end
 
   it "is invalid without title" do
-    p = Post.new(title: nil, body:"blabla")
+    p = Post.new(author: @user, title: nil, body:"blabla")
     expect(p).not_to be_valid
   end
 
   it "is invalid without body" do
-    p = Post.new(title: "Событие", body: nil)
+    p = Post.new(author: @user, title: "Событие", body: nil)
     expect(p).not_to be_valid
   end
 
