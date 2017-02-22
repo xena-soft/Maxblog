@@ -16,6 +16,7 @@ gem 'will_paginate'
 gem 'bcrypt'
 gem 'jwt'
 gem 'simple_command'
+gem 'active_model_serializers'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 # Use Puma as the app server
@@ -47,6 +48,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
