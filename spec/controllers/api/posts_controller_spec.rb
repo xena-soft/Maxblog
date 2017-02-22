@@ -12,31 +12,32 @@ describe Api::PostsController do
   end
 
   describe 'GET #index' do
-    it "renders with json" do
+
+    it "responds successfully with an HTTP 200 status code" do
       get :index
-      response.body.should == @posts.to_json
+      expect(response).to be_success
+      expect(response).to have_http_status(200)
+    end
+
+    it "responds with json" do
+      get :index
+      expect(response.body).to eq (@posts.to_json)
     end
 
   end
 
   describe 'GET #show' do
 
-    it "renders show with json" do
+    it "responds successfully with an HTTP 200 status code" do
       get :show, id: @post1.id
-      response.body.should == @post1.to_json
+      expect(response).to be_success
+      expect(response).to have_http_status(200)
     end
-
-    # it "renders 404page if post is not found" do
-    #   get :show, id: 0
-    #   response.status.should == 404
-    # end
 
   end
 
-  # describe 'POST #create' do
-  #   it "does something upon post#create" do
-  #     post :create, post: attributes_for(:post)
-  #   end
-  # end
+  describe 'POST #create' do
+
+  end
 
 end

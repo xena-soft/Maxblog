@@ -11,5 +11,5 @@ class Post < ApplicationRecord
   def author_nickname
     author.nickname
   end
-  
+
 end
