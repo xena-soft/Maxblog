@@ -3,7 +3,7 @@ class CreatePosts < ActiveRecord::Migration[5.0]
     create_table :posts do |t|
       t.string :title
       t.string :body
-      t.integer :author_id
+      t.integer :author_id, foreign_key: true, index: true
       t.date :published_at
 
       t.timestamps
