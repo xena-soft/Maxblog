@@ -16,12 +16,12 @@ describe Api::PostsController do
     it "responds successfully with an HTTP 200 status code" do
       get :index
       expect(response).to be_success
-      expect(response).to have_http_status(200)
+      expect(response.status).to eq 200
     end
 
-    it "responds with json" do
+    it "returns all the posts" do
       get :index
-      expect(response.body).to eq (@posts.to_json)
+      expect(@posts).to match_array([@post1,@post2])
     end
 
   end
@@ -29,9 +29,16 @@ describe Api::PostsController do
   describe 'GET #show' do
 
     it "responds successfully with an HTTP 200 status code" do
-      get :show, id: @post1.id
+      get :show, params: { id: @post1.id }
       expect(response).to be_success
-      expect(response).to have_http_status(200)
+      expect(response.status).to eq 200
+
+    end
+
+    it "return post1" do
+      get :show, params: { id: @post1.id }
+      body = JSON.parse(response.body)
+      expect(body["title"]).to eq "1"
     end
 
   end
