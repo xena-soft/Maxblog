@@ -44,7 +44,18 @@ describe Api::PostsController do
   end
 
   describe 'POST #create' do
-
+    # it "creates a post" do
+    #   post_params = @post1.to_json
+    #
+    #   request_headers = {
+    #       "Accept": "application/json",
+    #       "Content-Type": "application/json"
+    #   }
+    #
+    #   post :create, post_params, request_headers
+    #   expect(response.status).to eq "201" # created
+    #   expect(@post1.title).to eq "1"
+    # end
   end
 
 end

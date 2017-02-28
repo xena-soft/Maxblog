@@ -57,6 +57,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.4)
+    database_cleaner (1.5.3)
     debug_inspector (0.0.2)
     default_value_for (3.0.2)
       activerecord (>= 3.2.0, < 5.1)
@@ -224,6 +225,7 @@ DEPENDENCIES
   bcrypt
   byebug
   coffee-rails (~> 4.2)
+  database_cleaner
   default_value_for
   haml-rails
   jbuilder (~> 2.5)
